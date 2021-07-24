@@ -1,0 +1,21 @@
+
+
+<div class="container">
+  <h2 [style.color]="color">Calculator</h2>
+  <div>
+    <label for="number1">Number 1</label>
+    <input type="number" [value]="number1" id="number1" (change)="changeNumber1($event)">
+  </div>
+  <div>
+    <label for="number2">Number 2</label>
+    <input type="number" [value]="number2" id="number2" (change)="changeNumber2($event)">
+  </div>
+  <div>
+    <input type="submit" value="+"  (click)="addition()">
+    <input type="submit" value="-"  (click)="subtraction()">
+    <input type="submit" value="* " (click)="multiplication()">
+    <input type="submit" value="/ " (click)="division()">
+    <p> Result :   {{result}}</p>
+  </div>
+</div>
+
