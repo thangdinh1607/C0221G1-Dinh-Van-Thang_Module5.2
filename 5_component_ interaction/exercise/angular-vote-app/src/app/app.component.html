@@ -1,0 +1,6 @@
+<h2>Rating bar</h2>
+<p *ngIf="rateP==null">-----</p>
+<p>{{rateP}}</p>
+<app-rating-bar (rateChanged)="rateChangeHandle(($event))"></app-rating-bar>
+<br>
+
