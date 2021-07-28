@@ -1,0 +1,25 @@
+
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th colspan="2 ">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of products,index as i">
+      <th scope="row">{{i +1}}</th>
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.description}}</td>
+      <td ><a [routerLink]="['/products/delete',p.id]">Delete </a> </td>
+      <td ><a [routerLink]="['/products/edit', p.id]">Edit</a> </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="text-center">Dictionary</h2>
+  <table class="table">
+    <tr>
+      <th>#</th>
+      <th>Word</th>
+      <th><Button [routerLink]="['/create']"> Add new word</Button></th>
+    </tr>
+    <tr *ngFor="let w of iWords, index as i">
+      <td >{{i+1}}</td>
+      <td >{{w.word}}</td>
+      <td ><button [routerLink]="['/word',w.word]">Translate</button></td>
+    </tr>
+  </table>
+</div>
+

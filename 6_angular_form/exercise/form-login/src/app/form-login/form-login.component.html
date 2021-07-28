@@ -1,0 +1,20 @@
+<div class="container text-center" >
+  <h2 class="text-center">Form login</h2>
+
+  <form [formGroup]="login" (ngSubmit)="onSubmit()" novalidate >
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email">
+      <p *ngIf="!login.controls.email?.valid" style="color: red">Email is not valid</p>
+      <p *ngIf="login.controls.email.hasError('required')" style="color: red">Email is not Empty</p>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+      <p *ngIf="!login.controls.password?.valid" style="color: red"> character > 6</p>
+      <p *ngIf="login.controls.password.hasError('required')"  style="color: red" >Not Empty </p>
+    </div>
+    <button type="submit" [disabled]="!login.valid">Submit</button>
+  </form>
+
+</div>

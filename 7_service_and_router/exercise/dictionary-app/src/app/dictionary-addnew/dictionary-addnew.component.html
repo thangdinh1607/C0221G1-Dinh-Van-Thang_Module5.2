@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Add new word</h2>
+  <form class="form-group" [formGroup]="wordForm" (ngSubmit)="addNew()">
+    <tr>
+      <td><label for="word">Word</label></td>
+      <td><input type="text" formControlName="word" id="word"></td>
+    </tr>
+    <tr>
+      <td><label for="mean">Mean</label></td>
+      <td><input type="text" formControlName="mean" id="mean"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="float:right">
+        <button class="btn btn-primary">Add New</button>
+      </td>
+    </tr>
+  </form>
+</div>
