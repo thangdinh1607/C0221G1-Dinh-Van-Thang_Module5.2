@@ -1,0 +1,47 @@
+<h2>Register</h2>
+<form class="form-control" [formGroup]="contactForm" (ngSubmit)="createContract()">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" formControlName="email">
+  <div
+    *ngIf="!contactForm.controls.email?.valid && (contactForm.controls.email?.dirty||contactForm.controls.email?.touched)">
+    abc@abc.com
+  </div>
+  <div formGroupName="passwordGroup">
+    <label for="password">password</label>
+    <input type="text" id="password" formControlName="password">
+    <div
+      *ngIf="!contactForm.controls.passwordGroup.valid && (contactForm.controls.passwordGroup.dirty || contactForm.controls.passwordGroup.touched)">
+      <small [hidden]="!contactForm.controls.passwordGroup.errors.required"> Not empty</small>
+    </div>
+    <label for="confirmPassword">confirm password</label>
+    <input type="text" id="confirmPassword" formControlName="confirmPassword">
+    <div
+      *ngIf="!contactForm.controls.passwordGroup.valid && (contactForm.controls.passwordGroup.dirty || contactForm.controls.passwordGroup.touched)">
+      <small [hidden]="!contactForm.controls.passwordGroup.errors.passwordNotMatch"> not match</small>
+    </div>
+  </div>
+  <label for="country">Country</label>
+  <select name="country" id="country" formControlName="country">
+    <option value="null">----</option>
+    <option [ngValue]="c.id" *ngFor="let c of countryList">{{c.country}}</option>
+  </select>
+  <small
+    *ngIf="!contactForm.controls.country?.valid && (contactForm.controls.country?.dirty || contactForm.controls.country?.touched)"
+    style="color: red;">select country</small>
+  <label for="age">Age</label>
+  <input type="number" id="age" formControlName="age">
+  <small
+    *ngIf="!contactForm.controls.age?.valid && (contactForm.controls.age?.dirty || contactForm.controls.age?.touched)">
+    age > 18
+  </small>
+  <label for="phone">Phone</label>
+  <input type="text" id="phone" formControlName="phone">
+  <small
+    *ngIf="!contactForm.controls.phone?.valid && (contactForm.controls.phone?.dirty || contactForm.controls.phone?.touched)">
+    090x-xxx-xxx
+  </small>
+  <label>Gender</label>
+  <input type="radio" value="male" name="gender" formControlName="gender"> Male
+  <input type="radio" value="female" name="gender" formControlName="gender"> Female
+  <button type="submit" [disabled]="!contactForm.valid">Register</button>
+</form>
