@@ -35,9 +35,28 @@ export class ProductListComponent implements OnInit {
   deleteProduct(id: number) {
     this.idDelete = id;
     this.productService.deleteProduct(this.idDelete).subscribe(() => {
-      this.router.navigateByUrl('product1/list');
+      this.getAllProduct();
     }, error => {
       console.log('not found');
+    });
+  }
+
+  searchName(nameSearch: string) {
+    console.log(nameSearch);
+    this.productService.searchNameProduct(nameSearch).subscribe(data => {
+      this.products = data;
+    }, error => {
+      console.log('errors');
+    });
+  }
+
+  search(nameSearch: string, priceSearch: number) {
+    console.log(nameSearch);
+    console.log(priceSearch);
+    this.productService.searchProduct(nameSearch, priceSearch).subscribe(data => {
+      this.products = data;
+    }, error => {
+      console.log('errors');
     });
   }
 }

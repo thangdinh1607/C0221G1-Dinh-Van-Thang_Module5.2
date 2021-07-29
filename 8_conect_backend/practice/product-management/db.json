@@ -2,27 +2,39 @@
   "product1": [
     {
       "id": 1,
-      "name": "IPhone 9999",
-      "price": "2400000",
-      "description": "New"
+      "name": "aaaa",
+      "price": "222",
+      "description": "eqweqwe"
     },
     {
-      "id": 3,
-      "name": "IPhone 14",
-      "price": "122121",
-      "description": "New"
+      "id": 2,
+      "name": "weqewqe",
+      "price": "222",
+      "description": "eqweqwe"
     },
     {
       "id": 4,
-      "name": "nothing",
-      "price": "10022",
-      "description": "heeee"
+      "name": "weqewqe",
+      "price": "333",
+      "description": "eqweqwe"
     },
     {
       "id": 5,
       "name": "weqewqe",
-      "price": "qweqweqwe",
+      "price": "444",
       "description": "eqweqwe"
+    },
+    {
+      "id": 6,
+      "name": "dinh thang",
+      "price": "555",
+      "description": "1111"
+    },
+    {
+      "id": 7,
+      "name": "zzz",
+      "price": "6",
+      "description": "zzzz"
     }
   ]
 }

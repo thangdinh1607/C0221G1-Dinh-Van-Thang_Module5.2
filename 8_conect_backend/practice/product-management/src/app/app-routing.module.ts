@@ -7,6 +7,9 @@ import {ProductEditComponent} from './product/product-edit/product-edit.componen
 
 const routes: Routes = [
   {
+    path: '', component: ProductListComponent
+  },
+  {
     path: 'product1/list', component: ProductListComponent
   },
   {

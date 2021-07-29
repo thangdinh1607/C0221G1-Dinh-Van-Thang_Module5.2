@@ -32,4 +32,11 @@ export class ProductService {
   deleteProduct(id: number): Observable<Product> {
     return this.httpClient.delete(`${this.url}product1/${id}`);
   }
+
+  searchNameProduct(name: string): Observable<Product[]> {
+    return this.httpClient.get<Product[]>(`${this.url}product1?name_like=${name}`);
+  }
+  searchProduct(name: string , price: number): Observable<Product[]>{
+    return this.httpClient.get<Product[]>(`${this.url}product1?name_like=${name}&price=${price}`);
+  }
 }
