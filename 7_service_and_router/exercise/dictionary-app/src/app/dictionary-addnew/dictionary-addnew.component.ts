@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+
 import {FormControl, FormGroup} from '@angular/forms';
-import {IWord} from '../model/IWord';
 import {DictionaryService} from '../service/dictionary.service';
+
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({

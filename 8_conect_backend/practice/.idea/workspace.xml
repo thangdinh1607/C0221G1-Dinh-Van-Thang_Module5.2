@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1313cd0c-b54f-416b-8451-f523f8d0605a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/protractor.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/src/app.po.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/e2e/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/login/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/model/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/model/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/register/register.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/register/register.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/app/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/src/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_reactive-form/exercise/register-form/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/dictionary-addnew/dictionary-addnew.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/dictionary-addnew/dictionary-addnew.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/dictionary-detail-component/dictionary-detail-component.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/dictionary-detail-component/dictionary-detail-component.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/dictionary-page-component/dictionary-page-component.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/exercise/dictionary-app/src/app/dictionary-page-component/dictionary-page-component.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-create/product-create.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-create/product-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-create/product-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-create/product-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-delete/product-delete.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-delete/product-delete.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-delete/product-delete.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-delete/product-delete.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-edit/product-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-edit/product-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-edit/product-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/product/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/service/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../7_service_and_router/practice/product-management/src/app/service/product.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1vvyfeaHEfI5u4ham8VlG1t0j9E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/product-management" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1313cd0c-b54f-416b-8451-f523f8d0605a" name="Default Changelist" comment="" />
+      <created>1627456961660</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627456961660</updated>
+      <workItem from="1627456963574" duration="108000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1627457070485">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1627457070485" />
+  </component>
+</project>

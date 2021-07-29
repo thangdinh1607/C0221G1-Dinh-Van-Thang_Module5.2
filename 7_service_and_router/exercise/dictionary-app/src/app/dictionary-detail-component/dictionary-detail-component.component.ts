@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
 import {DictionaryService} from '../service/dictionary.service';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class DictionaryDetailComponentComponent implements OnInit {
   mean: string;
+
   constructor(private dictionaryService: DictionaryService,
               private activatedRoute: ActivatedRoute,
               private router: Router) {
@@ -19,7 +20,7 @@ export class DictionaryDetailComponentComponent implements OnInit {
   }
 
   translate() {
-    let word = this.activatedRoute.snapshot.params.word;
-   this.mean =  this.dictionaryService.translate(word);
+    const word = this.activatedRoute.snapshot.params.word;
+    this.mean = this.dictionaryService.translate(word);
   }
 }

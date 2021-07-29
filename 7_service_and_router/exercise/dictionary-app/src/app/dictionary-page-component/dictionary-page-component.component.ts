@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
 import {IWord} from '../model/IWord';
 import {DictionaryService} from '../service/dictionary.service';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-dictionary-page-component',

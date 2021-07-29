@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
 
-import {RouterModule, Routes} from '@angular/router';
+
 import {DictionaryPageComponentComponent} from './dictionary-page-component/dictionary-page-component.component';
 import {DictionaryDetailComponentComponent} from './dictionary-detail-component/dictionary-detail-component.component';
 import {DictionaryAddnewComponent} from './dictionary-addnew/dictionary-addnew.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {path: '', component: DictionaryPageComponentComponent},
