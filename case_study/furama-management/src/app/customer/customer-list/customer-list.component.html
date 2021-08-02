@@ -1,12 +1,22 @@
 <h2>Customer List</h2>
 <table>
   <tr>
-    <th>ID</th>
+    <th>STT</th>
     <th>TypeCustomer</th>
     <th>Full Name</th>
     <th>Date of Birth</th>
     <th> Id Card</th>
     <th>Phone Number</th>
-    <th> </th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let c of customers, index as i">
+    <td>{{i + 1}}</td>
+    <ng-container *ngFor="let ct of customerTypes">
+      <td *ngIf="c.typeCustomer === ct.id ">{{ct.name}}</td>
+    </ng-container>
+    <td>{{c.name}}</td>
+    <td>{{c.dateOfBirth}}</td>
+    <td>{{c.idCard}}</td>
+    <td>{{c.phone}}</td>
   </tr>
 </table>

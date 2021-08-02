@@ -1,0 +1,52 @@
+{
+  "product": [
+    {
+      "name": "dinh thang",
+      "price": 2400000,
+      "category": 1,
+      "id": 7
+    },
+    {
+      "name": "dinh thang",
+      "price": 111,
+      "category": 4,
+      "id": 8
+    },
+    {
+      "name": "dinh thang",
+      "price": 1,
+      "category": 1,
+      "id": 9
+    },
+    {
+      "name": "gau gau",
+      "price": 666999,
+      "category": 2,
+      "id": 10
+    },
+    {
+      "name": "Iphone",
+      "price": "1",
+      "category": 3,
+      "id": 11
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Samsung"
+    },
+    {
+      "id": 2,
+      "name": "Apple"
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi"
+    },
+    {
+      "id": 4,
+      "name": "HTC"
+    }
+  ]
+}

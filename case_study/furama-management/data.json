@@ -118,10 +118,21 @@
       "id": 3,
       "name": "Laundry"
     },
-
     {
       "id": 4,
       "name": "Sauna"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "typeCustomer": 1,
+      "name": "thang dinh",
+      "dateOfBirth": "12-12-2002",
+      "idCard": "123456789",
+      "phone": "0905123123",
+      "email": "thangdinh@gmail.com",
+      "address": "Da Nang,Viet Nam"
     }
   ]
 }

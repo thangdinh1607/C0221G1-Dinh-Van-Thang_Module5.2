@@ -1,6 +1,6 @@
 export interface Customer {
   id?: number;
-  type?: string;
+  typeCustomer?: number;
   name?: string;
   dateOfBirth?: string;
   idCard?: string;

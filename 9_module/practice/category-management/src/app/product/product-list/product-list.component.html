@@ -1,0 +1,63 @@
+<h2>Product List </h2>
+<a routerLink="/product/create">add new product</a>
+<a routerLink="/category/list">Category list</a>
+<input type="text" #searchName (input)="searchByName(searchName.value)" placeholder="Search By name...">
+<div>
+  <input type="text"#searchName1 placeholder="Search by name..." (input)="searchByNameAndByPrice(searchName1.value,+searchPrice.value)">
+  <input type="number"#searchPrice placeholder="Search by price..." (input)="searchByNameAndByPrice(searchName1.value,+searchPrice.value)">
+</div>
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Category</th>
+    <th> Product Name</th>
+    <th>Product Price</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let p of products ,  index as i">
+    <td>{{i + 1 }}</td>
+    <ng-container *ngFor="let c of categories">
+      <td *ngIf="p.category===c.id ">{{c.name}}</td>
+    </ng-container>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td><a class="btn btn-primary" [routerLink]="['/product/edit' , p.id]">Edit</a></td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+              (click)="sendIdDelete(p.id)">
+        Delete
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Do u want delete <span *ngIf="productDelete">{{productDelete.name}}</span> ?
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" *ngIf="productDelete" style="color: red">
+              <p > id : {{productDelete.id}}</p>
+              <p>name : {{productDelete.name}}</p>
+              <p>price : {{productDelete.price}}</p>
+              <p>category:  {{productDelete.category}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal"
+                      (click)="deleteProduct(productDelete.id)">Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+

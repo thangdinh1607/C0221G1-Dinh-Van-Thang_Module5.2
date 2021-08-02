@@ -1,0 +1,29 @@
+<h2>add new product</h2>
+<form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="editProduct()">
+  <table>
+    <tr>
+      <td><label for="category">Category </label></td>
+      <select id="category" formControlName="category">
+        <ng-container *ngFor="let c of categories">
+          <option *ngIf="id===c.id" value="{{c.id}}" selected>{{c.name}}</option>
+          <option *ngIf="id!==c.id" value="{{c.id}}">{{c.name}}</option>
+        </ng-container>
+      </select>
+    </tr>
+    <tr>
+      <td><label for="name"> Product Name </label></td>
+      <td><input type="text" id="name" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td><label for="price"> Product Price </label></td>
+      <td><input type="number" id="price" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit"> Edit Product</button>
+        <a routerLink="/product/list">Cancel</a>
+      </td>
+    </tr>
+  </table>
+</form>

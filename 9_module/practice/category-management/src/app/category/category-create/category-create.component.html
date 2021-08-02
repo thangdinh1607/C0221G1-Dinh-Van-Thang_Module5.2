@@ -1,0 +1,19 @@
+<p>category-create works!</p>
+<form [formGroup]="categoryForm" (ngSubmit)="createCategory()">
+  <table>
+    <tr>
+      <td>
+        <label for="name">Name</label>
+      </td>
+      <td>
+        <input type="text" id="name" formControlName="name">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type=submit> Create Category</button>
+      </td>
+    </tr>
+  </table>
+</form>

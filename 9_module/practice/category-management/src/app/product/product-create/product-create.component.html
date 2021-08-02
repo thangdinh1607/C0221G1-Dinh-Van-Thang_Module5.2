@@ -1,0 +1,27 @@
+<h2>add new product</h2>
+<form [formGroup]="productForm" (ngSubmit)="createProduct()">
+  <table>
+    <tr>
+      <td><label for="category">Category </label></td>
+      <select  id="category" formControlName="category" >
+        <option value="null">------</option>
+        <option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
+      </select>
+    </tr>
+    <tr>
+      <td><label for="name"> Product Name </label></td>
+      <td><input type="text" id="name" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td><label for="price"> Product Price </label></td>
+      <td><input type="text" id="price" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td >
+        <button type="submit"> Create Product</button>
+        <a routerLink="/product/list">Cancel</a>
+      </td>
+    </tr>
+  </table>
+</form>

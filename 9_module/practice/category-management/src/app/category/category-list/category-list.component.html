@@ -1,0 +1,13 @@
+<h2>Category List</h2>
+<a routerLink="/category/create">Add new Category</a>
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let c of categories , index as i">
+    <td>{{i+1}}</td>
+    <td>{{c.name}}</td>
+  </tr>
+</table>
+<a routerLink="/product/list">Back to product list</a>

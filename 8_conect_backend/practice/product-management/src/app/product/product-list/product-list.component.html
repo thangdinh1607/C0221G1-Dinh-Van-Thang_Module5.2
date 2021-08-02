@@ -1,7 +1,7 @@
 <a routerLink="/product1/create">Create Product</a>
 <h2> Product List</h2>
 <input type="text" #nameSearch (input)="searchName(nameSearch.value)" placeholder="Search Name">
----------------------
+
 <div>
   <input type="text" #nameSearch1 (input)="search(nameSearch1.value, +priceSearch.value)" placeholder="Search Name">
   <input type="number" #priceSearch (input)="search(nameSearch.value, +priceSearch.value)" placeholder="Price Name">
