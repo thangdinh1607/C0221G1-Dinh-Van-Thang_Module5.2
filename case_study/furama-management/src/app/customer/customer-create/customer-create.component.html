@@ -1,0 +1,71 @@
+
+<div style="margin-top: 120px" class="container">
+  <h2 class="text-center">Add new customer</h2>
+  <form [formGroup]="customerForm" (ngSubmit)="createCustomer()">
+    <table>
+      <tr>
+        <td><label for="typeCustomer">TypeCustomer</label></td>
+        <td>
+          <select id="typeCustomer" formControlName="typeCustomer">
+            <option *ngFor="let ct of customerTypes" value="{{ct.id}}">{{ct.name}}</option>
+          </select>
+        </td>
+        <small *ngIf="customerForm.controls.typeCustomer.hasError('required') &&
+        (customerForm.controls.typeCustomer?.touched ||customerForm.controls.typeCustomer?.dirty)" style="color: red;">select
+          type customer </small>
+      </tr>
+      <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" id="name" formControlName="name"></td>
+        <div *ngIf="customerForm.controls.name?.touched ||customerForm.controls.name?.dirty">
+          <small *ngIf="customerForm.controls.name.hasError('required')" style="color: red">Not Empty </small>
+          <small *ngIf="customerForm.controls.name.hasError('minlength')" style="color: red">character > 10 </small>
+        </div>
+      </tr>
+      <tr>
+        <td><label>Gender</label></td>
+        <td>
+          <label for="male">Male</label>
+          <input type="radio" id="male" value="male" formControlName="gender">
+          <label for="female">Female</label>
+          <input type="radio" id="female" value="female" formControlName="gender">
+          <label for="other">Other</label>
+          <input type="radio" id="other" value="other" formControlName="gender">
+        </td>
+        <small
+          *ngIf="customerForm.controls.name.valid"
+          style="color: red">Not Empty</small>
+      </tr>
+      <tr>
+        <td><label for="dateOfBirth">Date of birth</label></td>
+        <td><input type="date" id="dateOfBirth" formControlName="dateOfBirth"></td>
+        <small *ngIf="customerForm.controls.dateOfBirth.hasError('required')&&(customerForm.controls.dateOfBirth.dirty|| customerForm.controls.dateOfBirth.touched)"> insert date of birth </small>
+      </tr>
+      <tr>
+        <td><label for="idCard">Id Card</label></td>
+        <td><input type="text" id="idCard" formControlName="idCard"></td>
+      </tr>
+      <tr>
+        <td><label for="phoneNumber">Phone Number</label></td>
+        <td><input type="text" id="phoneNumber" formControlName="phone"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="text" id="email" formControlName="email"></td>
+      </tr>
+      <tr>
+        <td><label for="address">Address</label></td>
+        <td><input type="text" id="address" formControlName="address"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <Button [disabled]="!customerForm.valid" type="submit" class="btn btn-primary">Creat customer</Button>
+          <a routerLink="/customer/list" class="btn btn-primary">Cancel</a>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+

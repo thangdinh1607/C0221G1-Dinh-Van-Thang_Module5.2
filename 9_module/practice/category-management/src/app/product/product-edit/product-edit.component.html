@@ -5,8 +5,8 @@
       <td><label for="category">Category </label></td>
       <select id="category" formControlName="category">
         <ng-container *ngFor="let c of categories">
-          <option *ngIf="id===c.id" value="{{c.id}}" selected>{{c.name}}</option>
-          <option *ngIf="id!==c.id" value="{{c.id}}">{{c.name}}</option>
+          <option *ngIf="product.category===c.id" value="{{c.id}}" selected>{{c.name}}</option>
+          <option *ngIf="product.category!==c.id" value="{{c.id}}">{{c.name}}</option>
         </ng-container>
       </select>
     </tr>

@@ -1,22 +1,94 @@
-<h2>Customer List</h2>
-<table>
-  <tr>
-    <th>STT</th>
-    <th>TypeCustomer</th>
-    <th>Full Name</th>
-    <th>Date of Birth</th>
-    <th> Id Card</th>
-    <th>Phone Number</th>
-    <th></th>
-  </tr>
-  <tr *ngFor="let c of customers, index as i">
-    <td>{{i + 1}}</td>
-    <ng-container *ngFor="let ct of customerTypes">
-      <td *ngIf="c.typeCustomer === ct.id ">{{ct.name}}</td>
-    </ng-container>
-    <td>{{c.name}}</td>
-    <td>{{c.dateOfBirth}}</td>
-    <td>{{c.idCard}}</td>
-    <td>{{c.phone}}</td>
-  </tr>
-</table>
+<h2 class="text-center">Customer List</h2>
+<div class="row" style="margin-top: 120px">
+  <div class="col-3">
+<!--    <label for="searchName">Searh Name </label>-->
+<!--    <input type="text" id="searchName" #searchName (input)="searchByName(searchName.value)">-->
+    <div>
+      <table>
+        <tr>
+          <td><label for="searchName1">Search By Name</label></td>
+          <td><input type="text" #searchName1
+                     (input)="searchByCustomerTypeAndName(+searchByType.value,searchName1.value)" id="searchName1"
+                     placeholder="SearchName..."></td>
+        </tr>
+        <tr>
+          <td><label for="searchByType">Search By TypeCustomer</label></td>
+          <td><select #searchByType (input)="searchByCustomerTypeAndName(+searchByType.value,searchName1.value)"
+                      id="searchByType">
+            <option value="0" selected>----</option>
+            <option *ngFor=" let c of customerTypes" value="{{c.id}}">{{c.name}}</option>
+          </select></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-9">
+    <a routerLink="/customer/create" class="btn btn-primary ">Add new Customer</a>
+    <table>
+      <tr>
+        <th>STT</th>
+        <th>TypeCustomer</th>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th> Id Card</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th colspan="3">Action</th>
+      </tr>
+      <tr *ngFor="let c of customers|paginate: { itemsPerPage: 5, currentPage: pageDefault} ,index as i">
+        <td>{{i + 1}}</td>
+        <ng-container *ngFor="let ct of customerTypes">
+          <td *ngIf="c.typeCustomer == ct.id ">{{ct.name}}</td>
+        </ng-container>
+        <td>{{c.name}}</td>
+        <td>{{c.gender}}</td>
+        <td>{{c.dateOfBirth | date}}</td>
+        <td>{{c.idCard}}</td>
+        <td>{{c.phone}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.address}}</td>
+        <td><a [routerLink]="['/customer/edit',c.id]" class="btn btn-primary">Edit</a></td>
+        <td>
+          <!-- Button trigger modal -->
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                  (click)="sendIdDelete(c.id)">
+            Delete
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+               aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel" *ngIf="customerDelete">
+                    Do u want delete <span style="color: red">  {{customerDelete.name}}</span> ?
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" *ngIf="customerDelete">
+                  <p> name <span style="color: red"> {{customerDelete.name}}</span></p>
+                  <p> gender <span style="color: red"> {{customerDelete.gender}}</span></p>
+                  <p> address <span style="color: red">{{customerDelete.address}} </span></p>
+                  <p> typeCustomer <span style="color: red">{{customerDelete.typeCustomer}}</span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal"
+                          (click)="deleteCustomer(customerDelete.id)">Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <pagination-controls (pageChange)="pageDefault = $event"></pagination-controls>
+  </div>
+</div>
+

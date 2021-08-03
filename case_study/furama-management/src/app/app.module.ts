@@ -8,12 +8,17 @@ import {CustomerTypeListComponent} from './customer-type/customer-type-list/cust
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

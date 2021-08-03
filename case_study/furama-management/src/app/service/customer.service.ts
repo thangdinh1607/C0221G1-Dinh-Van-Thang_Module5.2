@@ -33,4 +33,12 @@ export class CustomerService {
   removeCustomer(id: number): Observable<Customer> {
     return this.httpClient.delete<Customer>(API_URL + '/customer' + `/${id}`);
   }
+
+  searchByName(nameSearch: string): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>(API_URL + '/customer?name_like=' + `${nameSearch}`);
+  }
+
+  searchByCustomerType(num: number, nameSearch: string): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>(API_URL + '/customer?typeCustomer=' + `${num}` + '&name_like=' + `${nameSearch}`);
+  }
 }

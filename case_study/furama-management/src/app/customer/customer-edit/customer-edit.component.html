@@ -1,0 +1,58 @@
+<div class="container"style="margin-top: 150px">
+  <h2 class="text-center" >Edit customer</h2>
+  <form *ngIf="customerForm" [formGroup]="customerForm" (ngSubmit)="editCustomer()">
+    <table>
+      <tr>
+        <td><label for="typeCustomer">TypeCustomer</label></td>
+        <select id="typeCustomer" formControlName="typeCustomer">
+          <ng-container *ngFor="let ct of customerTypes">
+            <option *ngIf="customer.typeCustomer==ct.id" value="{{ct.id}}">{{ct.name}}</option>
+            <option *ngIf="customer.typeCustomer!=ct.id" value="{{ct.id}}">{{ct.name}}</option>
+          </ng-container>
+        </select>
+      </tr>
+      <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" id="name" formControlName="name"></td>
+      </tr>
+      <tr>
+        <td><label>Gender</label></td>
+        <td>
+          <label for="male">Male</label>
+          <input type="radio" id="male" value="male" formControlName="gender">
+          <label for="female">Female</label>
+          <input type="radio" id="female" value="female" formControlName="gender">
+          <label for="other">Other</label>
+          <input type="radio" id="other" value="other" formControlName="gender">
+        </td>
+      </tr>
+      <tr>
+        <td><label for="dateOfBirth">Date of birth</label></td>
+        <td><input type="date" id="dateOfBirth" formControlName="dateOfBirth"></td>
+      </tr>
+      <tr>
+        <td><label for="idCard">Id Card</label></td>
+        <td><input type="text" id="idCard" formControlName="idCard"></td>
+      </tr>
+      <tr>
+        <td><label for="phoneNumber">Phone Number</label></td>
+        <td><input type="text" id="phoneNumber" formControlName="phone"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="text" id="email" formControlName="email"></td>
+      </tr>
+      <tr>
+        <td><label for="address">Address</label></td>
+        <td><input type="text" id="address" formControlName="address"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <Button type="submit" class="btn btn-primary">Edit Customer</Button>
+          <a routerLink="/customer/list" class="btn btn-primary">Cancel</a>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

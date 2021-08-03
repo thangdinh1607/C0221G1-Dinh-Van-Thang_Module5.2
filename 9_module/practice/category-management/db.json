@@ -19,12 +19,6 @@
       "id": 9
     },
     {
-      "name": "gau gau",
-      "price": 666999,
-      "category": 2,
-      "id": 10
-    },
-    {
       "name": "Iphone",
       "price": "1",
       "category": 3,
@@ -47,6 +41,10 @@
     {
       "id": 4,
       "name": "HTC"
+    },
+    {
+      "id": 5,
+      "name": "Motorola"
     }
   ]
 }

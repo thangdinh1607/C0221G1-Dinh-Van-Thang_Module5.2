@@ -15,6 +15,7 @@ export class ProductEditComponent implements OnInit {
   categories: Category[] = [];
   id: number;
   productForm: FormGroup;
+  product: Product;
 
   constructor(private productService: ProductService,
               private categoryService: CategoryService,
@@ -35,12 +36,14 @@ export class ProductEditComponent implements OnInit {
       console.log(this.id);
     });
   }
+
   // getID() {
   //   this.id = +this.activatedRoute.snapshot.paramMap.get('id');
   // }
 
   getProductEdit() {
     this.productService.findProductById(this.id).subscribe(product => {
+      this.product = product;
       this.productForm = new FormGroup({
         name: new FormControl(product.name),
         price: new FormControl(product.price),

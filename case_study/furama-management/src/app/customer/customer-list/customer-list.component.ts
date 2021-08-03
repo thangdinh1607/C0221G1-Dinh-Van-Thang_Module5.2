@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Customer} from '../../model/customer';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
-import {Observable} from 'rxjs';
 import {CustomerType} from '../../model/customer-type';
 
 @Component({
@@ -13,6 +12,9 @@ import {CustomerType} from '../../model/customer-type';
 export class CustomerListComponent implements OnInit {
   customers: Customer[] = [];
   customerTypes: CustomerType[] = [];
+  pageDefault = 1;
+  idDelete: number;
+  customerDelete: Customer;
 
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
@@ -35,9 +37,51 @@ export class CustomerListComponent implements OnInit {
   getAllCustomerType() {
     this.customerTypeService.getAllCustomerType().subscribe(data => {
       this.customerTypes = data;
-      console.log(data);
     }, error => {
       console.log(error);
     });
+  }
+
+  sendIdDelete(id: number) {
+    this.idDelete = id;
+    this.getInForCustomerDelete();
+  }
+
+  getInForCustomerDelete() {
+    this.customerService.findCustomerByID(this.idDelete).subscribe(data => {
+      this.customerDelete = data;
+    }, error => {
+      console.log('errors' + error);
+    });
+  }
+
+  deleteCustomer(id: number) {
+    this.customerService.removeCustomer(id).subscribe(() => {
+      console.log('delete is success');
+      this.getAllCustomer();
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  searchByName(searchName: string) {
+    this.customerService.searchByName(searchName).subscribe(data => {
+      this.customers = data;
+    }, error => {
+      console.log('search is errors' + error);
+    });
+  }
+
+  searchByCustomerTypeAndName(num: number, nameSearch: string) {
+    if (num !== 0) {
+      this.customerService.searchByCustomerType(num, nameSearch).subscribe(data => {
+        this.customers = data;
+      }, error => {
+        console.log(error);
+      });
+    } else {
+      this.searchByName(nameSearch);
+    }
+
   }
 }
