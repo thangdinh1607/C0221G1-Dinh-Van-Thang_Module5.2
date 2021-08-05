@@ -1,0 +1,61 @@
+<div class="container">
+  <h2 class="text-center">List Patient</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>STT</th>
+      <th>PerSon</th>
+      <th>Start day</th>
+      <th>End day</th>
+      <th> Reason</th>
+      <th> Method</th>
+      <th> Doctor</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let p of patients , index as i" >
+      <td>{{i+1}}</td>
+      <ng-container *ngFor="let ps of persons">
+        <td *ngIf="p.person == ps.id ">{{ps.name}}</td>
+      </ng-container>
+      <td>{{p.startDay | date : "MM/dd/yyyy"}}</td>
+      <td>{{p.endDay | date : 'dd/MM/yyyy'}}</td>
+      <td>{{p.reason}}</td>
+      <td>{{p.method}}</td>
+      <td>{{p.doctor}}</td>
+      <td><a [routerLink]="['/patient/edit',p.id]" class="btn btn-primary">Edit</a></td>
+      <td>
+        <!-- Button trigger modal -->
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                (click)="sendIdDelete(p.id)">
+          Delete
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" *ngIf="patientDelete">
+                  Do u want delete <span style="color: red">  {{patientDelete.name}}</span> ?
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" *ngIf="patientDelete">
+                <p> name <span style="color: red"> {{patientDelete.person}}</span></p>
+                <p> doctor <span style="color: red"> {{patientDelete.doctor}}</span></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        (click)="deletePatient(patientDelete.id)">Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

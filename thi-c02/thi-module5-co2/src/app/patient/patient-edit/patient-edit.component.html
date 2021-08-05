@@ -1,0 +1,63 @@
+<div class="container">
+
+
+  <h2 class="text-center">Edit Patient</h2>
+  <form *ngIf="patientForm" [formGroup]="patientForm" (ngSubmit)="edit()">
+    <table class="table table-striped ">
+      <tr>
+        <th><label for="person">PerSon</label></th>
+        <select id="person" formControlName="person">
+          <ng-container *ngFor="let ps of persons">
+            <option *ngIf="patient.person==ps.id" value="{{ps.id}}">{{ps.name}}</option>
+            <option *ngIf="patient.person!=ps.id" value="{{ps.id}}">{{ps.name}}</option>
+          </ng-container>
+        </select>
+        <small *ngIf="patientForm.controls.person.hasError('required') &&
+        (patientForm.controls.person?.touched ||patientForm.controls.person?.dirty)" style="color: red;">
+          Not empty </small>
+      </tr>
+      <tr>
+        <th><label for="startDay">Start day</label></th>
+        <td><input type="date" id="startDay" formControlName="startDay"></td>
+        <small *ngIf="patientForm.controls.startDay.hasError('required') &&
+        (patientForm.controls.startDay?.touched ||patientForm.controls.startDay?.dirty)" style="color: red;">
+          Not empty </small>
+      </tr>
+      <tr>
+        <th><label for="endDay">End day</label></th>
+        <td><input type="date" id="endDay" formControlName="endDay"></td>
+        <small *ngIf="patientForm.controls.endDay.hasError('required') &&
+        (patientForm.controls.endDay?.touched ||patientForm.controls.endDay?.dirty)" style="color: red;">
+          Not empty </small>
+      </tr>
+      <tr>
+        <th><label for="reason">Reason</label></th>
+        <td><input type="text" id="reason"formControlName="reason"></td>
+        <small *ngIf="patientForm.controls.reason.hasError('required') &&
+        (patientForm.controls.reason?.touched ||patientForm.controls.reason?.dirty)" style="color: red;">
+          Not empty </small>
+      </tr>
+      <tr>
+        <th><label for="method">Method</label></th>
+        <td><input type="text" id="method"formControlName="method"></td>
+        <small *ngIf="patientForm.controls.method.hasError('required') &&
+        (patientForm.controls.method?.touched ||patientForm.controls.method?.dirty)" style="color: red;">
+          Not empty </small>
+      </tr>
+      <tr>
+        <th><label for="doctor">Doctor</label></th>
+        <td><input type="text" id="doctor"formControlName="doctor"></td>
+        <small *ngIf="patientForm.controls.doctor.hasError('required') &&
+        (patientForm.controls.doctor?.touched ||patientForm.controls.reason?.dirty)" style="color: red;">
+          Not empty </small>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <Button [disabled]="!patientForm.valid" type="submit" class="btn btn-primary">Edit</Button>
+          <a routerLink="/patient/list" class="btn btn-primary">Cancel</a></td>
+      </tr>
+    </table>
+  </form>
+</div>

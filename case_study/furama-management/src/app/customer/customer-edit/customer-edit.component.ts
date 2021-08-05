@@ -26,7 +26,7 @@ export class CustomerEditComponent implements OnInit {
   ngOnInit(): void {
     this.getId();
     this.getCustomerEdit();
-    this.getAllCustomerType()
+    this.getAllCustomerType();
   }
 
   getAllCustomerType() {

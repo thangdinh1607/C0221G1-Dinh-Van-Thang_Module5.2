@@ -1,0 +1,63 @@
+{
+  "patient": [
+    {
+      "id": 2,
+      "person": "1",
+      "startDay": "2000-12-12",
+      "endDay": "2000-12-14",
+      "reason": "ly do",
+      "method": "phuong phap",
+      "doctor": "thang dinh9888"
+    },
+    {
+      "id": 4,
+      "person": "2",
+      "startDay": "2000-12-12",
+      "endDay": "2000-12-25",
+      "reason": "ly do",
+      "method": "phuong phap",
+      "doctor": "thang dinh1"
+    },
+    {
+      "id": 1,
+      "person": "3",
+      "startDay": "2000-12-12",
+      "endDay": "2000-12-25",
+      "reason": "ly do",
+      "method": "phuong phap",
+      "doctor": "thang dinh2"
+    },
+    {
+      "id": 6,
+      "person": "2",
+      "startDay": "2000-12-12",
+      "endDay": "2000-12-25",
+      "reason": "ly do",
+      "method": "phuong phap",
+      "doctor": "thang dinh3"
+    },
+    {
+      "id": 8,
+      "person": "2",
+      "startDay": "2000-12-12",
+      "endDay": "2000-12-25",
+      "reason": "ly do",
+      "method": "phuong phap",
+      "doctor": "thang dinh4"
+    }
+  ],
+  "person": [
+    {
+      "id": 1,
+      "name": "gaugau"
+    },
+    {
+      "id": 2,
+      "name": "meomeo"
+    },
+    {
+      "id": 3,
+      "name": "hehe"
+    }
+  ]
+}
